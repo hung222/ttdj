@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load staticfile %}
+{% block title %}{{ section.title }}{% endblock %}
+trò chơi gunbound
+{% block content %}
+<h1>{{ section.title }}</h1>
+gunbound gunbound
+gbgbgbgbgbgbgbgbgb, {{ name }}
+{% for gb in gb %}
+<h2>
+  <a href="{{ gb.get_absolute_url }}">
+    {{ gb.headline|upper }}
+  </a>
+</h2>
+<p>{{ gb.tease|truncatewords:"100" }}</p>
+{% endfor %}
+{% endblock %}
